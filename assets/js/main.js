@@ -106,6 +106,8 @@
           if (p < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
+        /* guarantee the final value even if rAF is throttled */
+        setTimeout(() => { el.textContent = target.toLocaleString() + suffix; }, dur + 150);
         cio.unobserve(el);
       });
     }, { threshold: 0.5 });

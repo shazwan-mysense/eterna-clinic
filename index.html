@@ -7,7 +7,7 @@
 <meta name="description" content="Éterna is a medical aesthetics clinic in Kuala Lumpur. Bespoke, doctor-led treatments — from consultation to aftercare. 永恒之美，为你定制。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -38,7 +38,7 @@
 <header class="header">
   <div class="container header__inner">
     <a class="logo" href="index.html" aria-label="Éterna Clinic — home">
-      <svg width="40" height="56" viewBox="0 0 40 56" fill="none" aria-hidden="true">
+      <svg width="38" height="54" viewBox="0 0 40 56" fill="none" aria-hidden="true">
         <ellipse cx="20" cy="28" rx="18.5" ry="26.5" stroke="#5B473E" stroke-width="1"/>
         <ellipse cx="20" cy="28" rx="15.5" ry="23.5" stroke="#5B473E" stroke-width=".7"/>
         <text x="20" y="36.5" text-anchor="middle" font-family="Marcellus, serif" font-size="21" fill="#5B473E">É</text>
@@ -71,7 +71,10 @@
     </nav>
 
     <div class="header__cta">
-      <a class="btn btn--outline" href="contact.html">Book a consultation</a>
+      <a class="icon-btn" href="treatments.html" aria-label="Search treatments">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      </a>
+      <a class="btn btn--boxed" href="contact.html">Book a Visit</a>
       <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -81,30 +84,34 @@
 
   <!-- hero -->
   <section class="hero">
-    <div class="container hero__inner">
-      <div class="hero__copy">
-        <p class="hero__eyebrow reveal">Medical aesthetics clinic <span class="cn">医美诊所 · Kuala Lumpur</span></p>
-        <h1 class="display-xl reveal d-1">Eternal beauty,<br><span class="accent">crafted for you</span></h1>
-        <p class="lead hero__lead reveal d-2">We believe beauty is not about changing who you are — it is about returning to your best self. From consultation to aftercare, every treatment at Éterna is planned around one face: yours.</p>
-        <div class="hero__actions reveal d-3">
-          <a class="btn btn--solid" href="contact.html">Book a consultation</a>
-          <a class="text-link" href="treatments.html">Explore treatments <span class="arr">→</span></a>
-        </div>
+    <aside class="hero__rail reveal">
+      <div class="hero__rail-arch">
+        <img src="https://images.unsplash.com/photo-1589525231707-f2de2428f59c?w=500&q=80&fm=jpg&fit=crop" alt="Portrait with soft natural skin" loading="eager">
       </div>
-      <div class="hero__media reveal-zoom">
-        <div class="hero__arch">
+      <div class="hero__call">
+        <span class="t">Call Us:</span>
+        <a href="tel:+60312345678">+60 3-1234 5678</a>
+      </div>
+    </aside>
+
+    <div class="hero__main">
+      <div class="hero__copy">
+        <h1 class="reveal">Eternal Beauty,<br>Crafted For You</h1>
+        <p class="lead reveal d-1">We believe beauty is not about changing who you are — it is about returning to your best self. From consultation to aftercare, every treatment at Éterna is planned around one face: yours.</p>
+        <div class="reveal d-2"><a class="btn btn--solid" href="contact.html">Book a Visit</a></div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__blob"></div>
+        <svg class="hero__line-art line-art" viewBox="0 0 300 420" aria-hidden="true">
+          <path d="M96 396 C64 344 86 300 90 256 C94 212 68 194 66 146 C64 90 98 32 158 28 C218 24 250 78 246 134 C243 174 224 198 220 228 C216 258 230 288 254 312"/>
+          <path d="M140 130 C152 122 166 122 174 130"/>
+          <path d="M160 142 C157 160 150 170 158 176 C165 181 172 176 172 176"/>
+          <path d="M150 200 C162 209 178 206 188 197"/>
+          <path d="M120 262 C150 286 196 282 224 258"/>
+        </svg>
+        <div class="hero__visual-arch reveal-zoom">
           <img src="https://images.unsplash.com/photo-1593260853607-d0e0f639bdab?w=900&q=80&fm=jpg&fit=crop" alt="Woman with calm, luminous skin" loading="eager">
         </div>
-        <div class="hero__card reveal d-2">
-          <b>The Éterna way</b>
-          <span>One doctor, one plan, one you — never a one-size-fits-all menu.</span>
-        </div>
-        <svg class="hero__line-art" viewBox="0 0 200 240" fill="none" aria-hidden="true">
-          <path d="M60 20 C110 8 150 44 148 92 C147 128 122 148 118 170 C115 188 124 204 140 214" stroke="#5B473E" stroke-width="1.1"/>
-          <path d="M84 96 C92 90 102 90 108 96" stroke="#5B473E" stroke-width="1.1"/>
-          <path d="M96 108 C94 120 90 126 96 130 C101 133 106 130 106 130" stroke="#5B473E" stroke-width="1.1"/>
-          <path d="M86 150 C96 158 110 156 118 148" stroke="#5B473E" stroke-width="1.1"/>
-        </svg>
       </div>
     </div>
   </section>
@@ -112,11 +119,16 @@
   <!-- statement -->
   <section class="section statement">
     <div class="container">
-      <blockquote class="reveal">
-        “Here, every guest is cared for with precision and sincerity. We combine medical expertise and aesthetics to craft a bespoke beauty experience made just for you.”
+      <span class="chip reveal">Medical Aesthetics · 医美</span>
+      <blockquote class="reveal d-1">
+        We help you return to your best state — bespoke treatment plans that combine medical expertise with a quiet sense of beauty.
         <span class="cn">美不是改变自己，而是回到最好的状态</span>
       </blockquote>
-      <a class="btn btn--outline reveal d-1" href="about.html">Discover our story</a>
+      <a class="btn btn--solid reveal d-2" href="about.html">Discover More</a>
+      <div class="statement__media reveal-zoom">
+        <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?w=1600&q=80&fm=jpg&fit=crop" alt="Inside the Éterna clinic" loading="lazy">
+        <button class="play-dot" aria-label="Play clinic film">▶</button>
+      </div>
     </div>
   </section>
 
@@ -126,86 +138,66 @@
       <img src="https://images.unsplash.com/photo-1740297165018-1431d45d8f11?w=1100&q=80&fm=jpg&fit=crop" alt="Patient resting during a gentle facial treatment" loading="lazy">
     </div>
     <div class="feature-split__panel">
-      <p class="kicker reveal">A bespoke aesthetic journey <span class="cn">高定美学之旅</span></p>
-      <h2 class="display-lg reveal d-1">Quietly advanced treatments, tailored to your skin</h2>
-      <p class="reveal d-2">Éterna focuses on natural enhancement — medical-grade treatments that refine rather than transform, chosen after a proper consultation and skin analysis.</p>
+      <span class="chip reveal">Bespoke Aesthetics · 高定美学</span>
+      <h2 class="display-lg reveal d-1">Explore Our Signature Treatment Options</h2>
+      <p class="reveal d-2" style="margin-top:14px">Éterna specialises in medical-grade skin refinement — treatments that restore rather than transform, chosen only after a proper consultation and skin analysis.</p>
       <ul class="checklist reveal d-2">
-        <li>Skin boosters</li>
-        <li>Signature medical facial</li>
-        <li>Wrinkle-relaxing injections</li>
-        <li>Dermal fillers</li>
-        <li>Pico laser pigmentation</li>
-        <li>HIFU lifting</li>
+        <li>Skin boosters;</li>
+        <li>Signature medical facial;</li>
+        <li>Wrinkle-relaxing injections;</li>
+        <li>Dermal fillers;</li>
+        <li>Pico laser;</li>
+        <li>HIFU lifting.</li>
       </ul>
-      <div class="reveal d-3"><a class="btn btn--solid" href="treatments.html">Find out more</a></div>
+      <div class="reveal d-3"><a class="btn btn--boxed" href="treatments.html">Find Out More</a></div>
     </div>
   </section>
 
-  <!-- services carousel -->
+  <!-- treatments carousel -->
   <section class="section">
-    <div class="container">
-      <div class="services-head">
+    <div class="container carousel" data-carousel>
+      <div class="sec-head">
         <div>
-          <p class="kicker reveal">Our treatments <span class="cn">疗程</span></p>
-          <h2 class="display-lg reveal d-1">Care that begins with listening</h2>
+          <h2 class="display-lg reveal">Our Treatments</h2>
+          <div class="reveal d-1" style="margin-top:22px"><a class="btn btn--boxed" href="treatments.html">View All Treatments</a></div>
         </div>
-        <div class="carousel__nav reveal d-2" data-nav-for="svc"></div>
-      </div>
-
-      <div class="carousel" data-carousel id="svc-carousel">
-        <div class="carousel__track">
-          <article class="svc-card reveal">
-            <div class="svc-card__media"><img src="https://images.unsplash.com/photo-1731355771317-b2ab72c79124?w=700&q=80&fm=jpg&fit=crop" alt="Skin booster treatment" loading="lazy"></div>
-            <div class="svc-card__body">
-              <p class="svc-card__cat">Injectable skincare<span class="cn">水光焕肤</span></p>
-              <h3>Skin boosters</h3>
-              <a class="text-link" href="treatment-skin-booster.html">View details <span class="arr">→</span></a>
-            </div>
-          </article>
-          <article class="svc-card reveal d-1">
-            <div class="svc-card__media"><img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=700&q=80&fm=jpg&fit=crop" alt="Signature medical facial" loading="lazy"></div>
-            <div class="svc-card__body">
-              <p class="svc-card__cat">Medical facial<span class="cn">医学焕肤</span></p>
-              <h3>Signature facial</h3>
-              <a class="text-link" href="treatment-skin-booster.html">View details <span class="arr">→</span></a>
-            </div>
-          </article>
-          <article class="svc-card reveal d-2">
-            <div class="svc-card__media"><img src="https://images.unsplash.com/photo-1706795033728-9232ef548a16?w=700&q=80&fm=jpg&fit=crop" alt="Gentle injectable treatment" loading="lazy"></div>
-            <div class="svc-card__body">
-              <p class="svc-card__cat">Anti-wrinkle<span class="cn">除皱注射</span></p>
-              <h3>Wrinkle-relaxing injections</h3>
-              <a class="text-link" href="treatment-skin-booster.html">View details <span class="arr">→</span></a>
-            </div>
-          </article>
-          <article class="svc-card">
-            <div class="svc-card__media"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&q=80&fm=jpg&fit=crop" alt="Dermal filler consultation" loading="lazy"></div>
-            <div class="svc-card__body">
-              <p class="svc-card__cat">Contouring<span class="cn">玻尿酸填充</span></p>
-              <h3>Dermal fillers</h3>
-              <a class="text-link" href="treatment-skin-booster.html">View details <span class="arr">→</span></a>
-            </div>
-          </article>
-          <article class="svc-card">
-            <div class="svc-card__media"><img src="https://images.unsplash.com/photo-1722350553295-ba84043b64cc?w=700&q=80&fm=jpg&fit=crop" alt="Laser pigmentation treatment" loading="lazy"></div>
-            <div class="svc-card__body">
-              <p class="svc-card__cat">Pigmentation<span class="cn">皮秒激光</span></p>
-              <h3>Pico laser</h3>
-              <a class="text-link" href="treatment-skin-booster.html">View details <span class="arr">→</span></a>
-            </div>
-          </article>
-          <article class="svc-card">
-            <div class="svc-card__media"><img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?w=700&q=80&fm=jpg&fit=crop" alt="HIFU lifting treatment" loading="lazy"></div>
-            <div class="svc-card__body">
-              <p class="svc-card__cat">Lifting<span class="cn">超声提拉</span></p>
-              <h3>HIFU lifting</h3>
-              <a class="text-link" href="treatment-skin-booster.html">View details <span class="arr">→</span></a>
-            </div>
-          </article>
+        <div class="carousel__nav reveal d-2">
+          <button class="carousel__btn" data-prev aria-label="Previous">←</button>
+          <button class="carousel__btn" data-next aria-label="Next">→</button>
         </div>
       </div>
-
-      <div style="margin-top:40px" class="reveal"><a class="btn btn--outline" href="treatments.html">View all treatments</a></div>
+      <div class="carousel__track">
+        <article class="svc-card reveal">
+          <img src="https://images.unsplash.com/photo-1731355771317-b2ab72c79124?w=700&q=80&fm=jpg&fit=crop" alt="Skin booster treatment" loading="lazy">
+          <div><p class="svc-card__cat">Injectable Skincare<span class="cn">水光焕肤</span></p><h3>Skin Boosters</h3></div>
+          <a class="btn btn--ghost" href="treatment-skin-booster.html">View Details</a>
+        </article>
+        <article class="svc-card reveal d-1">
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=700&q=80&fm=jpg&fit=crop" alt="Signature medical facial" loading="lazy">
+          <div><p class="svc-card__cat">Medical Facial<span class="cn">医学焕肤</span></p><h3>Signature Facial</h3></div>
+          <a class="btn btn--ghost" href="treatment-skin-booster.html">View Details</a>
+        </article>
+        <article class="svc-card reveal d-2">
+          <img src="https://images.unsplash.com/photo-1706795033728-9232ef548a16?w=700&q=80&fm=jpg&fit=crop" alt="Gentle anti-wrinkle treatment" loading="lazy">
+          <div><p class="svc-card__cat">Anti-Wrinkle<span class="cn">除皱注射</span></p><h3>Wrinkle-Relaxing Injections</h3></div>
+          <a class="btn btn--ghost" href="treatment-skin-booster.html">View Details</a>
+        </article>
+        <article class="svc-card">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=700&q=80&fm=jpg&fit=crop" alt="Dermal filler consultation" loading="lazy">
+          <div><p class="svc-card__cat">Contouring<span class="cn">玻尿酸填充</span></p><h3>Dermal Fillers</h3></div>
+          <a class="btn btn--ghost" href="treatment-skin-booster.html">View Details</a>
+        </article>
+        <article class="svc-card">
+          <img src="https://images.unsplash.com/photo-1722350553295-ba84043b64cc?w=700&q=80&fm=jpg&fit=crop" alt="Pico laser treatment" loading="lazy">
+          <div><p class="svc-card__cat">Pigmentation<span class="cn">皮秒激光</span></p><h3>Pico Laser</h3></div>
+          <a class="btn btn--ghost" href="treatment-skin-booster.html">View Details</a>
+        </article>
+        <article class="svc-card">
+          <img src="https://images.unsplash.com/photo-1683408640631-2c99fff964d7?w=700&q=80&fm=jpg&fit=crop" alt="HIFU lifting treatment" loading="lazy">
+          <div><p class="svc-card__cat">Lifting<span class="cn">超声提拉</span></p><h3>HIFU Lifting</h3></div>
+          <a class="btn btn--ghost" href="treatment-skin-booster.html">View Details</a>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -213,14 +205,9 @@
   <section class="section mission">
     <div class="container mission__grid">
       <div>
-        <p class="kicker reveal">Our promise <span class="cn">我们的承诺</span></p>
-        <h2 class="display-lg reveal d-1">Held to medical standards, delivered with warmth</h2>
-        <p class="lead reveal d-2">Every plan at Éterna is designed and reviewed by our doctors. We would rather recommend less — and do it beautifully — than sell you more than your skin needs.</p>
-        <div class="stats">
-          <div class="stat reveal"><b data-count="10" data-suffix="+">0</b><span>Years of combined clinical experience</span></div>
-          <div class="stat reveal d-1"><b data-count="6000" data-suffix="+">0</b><span>Treatments performed with care</span></div>
-          <div class="stat reveal d-2"><b data-count="98" data-suffix="%">0</b><span>Of guests say they would return</span></div>
-        </div>
+        <span class="chip reveal">Our Mission · 我们的承诺</span>
+        <h2 class="display-lg reveal d-1">Our Goal is to Provide the Highest Quality of Care</h2>
+        <p class="lead reveal d-2" style="margin-top:18px">Every plan at Éterna is designed and reviewed by our doctors. We would rather recommend less — and do it beautifully — than sell you more than your skin needs. Call or WhatsApp <a href="tel:+60312345678" style="text-decoration:underline">+60 3-1234 5678</a> to speak with our care team.</p>
       </div>
       <div class="mission__media reveal-zoom">
         <img src="https://images.unsplash.com/photo-1616326431919-be810ad5dacd?w=900&q=80&fm=jpg&fit=crop" alt="Éterna clinician in consultation" loading="lazy">
@@ -228,200 +215,308 @@
     </div>
   </section>
 
-  <!-- team -->
+  <!-- doctors -->
   <section class="section">
     <div class="container">
-      <div class="section-head section-head--center">
-        <p class="kicker reveal">The people who care for you <span class="cn">团队</span></p>
-        <h2 class="display-lg reveal d-1">A small team, on purpose</h2>
-        <p class="reveal d-2">You will see the same faces at every visit — that is how we keep your care personal and your results consistent.</p>
+      <div class="sec-head">
+        <h2 class="display-lg reveal">Our Doctors</h2>
+        <a class="btn btn--boxed reveal d-1" href="about.html">Meet the Team</a>
       </div>
       <div class="team-grid">
         <article class="person reveal">
           <div class="person__media"><img src="https://images.unsplash.com/photo-1612944095914-33fd0a85fcfc?w=700&q=80&fm=jpg&fit=crop" alt="Portrait of Dr. Chloe Tan" loading="lazy"></div>
-          <h3>Dr. Chloe Tan</h3>
-          <p>Medical director <span class="cn">· 医学总监</span></p>
+          <div class="person__bar"><h3>Dr. Chloe Tan</h3><p>Medical director <span class="cn">· 医学总监</span></p></div>
         </article>
         <article class="person reveal d-1">
           <div class="person__media"><img src="https://images.unsplash.com/photo-1686737357914-80a665ca1c29?w=700&q=80&fm=jpg&fit=crop" alt="Portrait of Dr. Wei Lin Ong" loading="lazy"></div>
-          <h3>Dr. Wei Lin Ong</h3>
-          <p>Aesthetic physician <span class="cn">· 美学医师</span></p>
+          <div class="person__bar"><h3>Dr. Wei Lin Ong</h3><p>Aesthetic physician <span class="cn">· 美学医师</span></p></div>
         </article>
         <article class="person reveal d-2">
           <div class="person__media"><img src="https://images.unsplash.com/photo-1624091844772-554661d10173?w=700&q=80&fm=jpg&fit=crop" alt="Portrait of Sandra Lim" loading="lazy"></div>
-          <h3>Sandra Lim</h3>
-          <p>Senior therapist <span class="cn">· 资深美疗师</span></p>
+          <div class="person__bar"><h3>Sandra Lim</h3><p>Senior therapist <span class="cn">· 资深美疗师</span></p></div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- reviews -->
-  <section class="section reviews">
-    <div class="container">
-      <div class="services-head">
-        <div>
-          <p class="kicker reveal">Kind words <span class="cn">口碑</span></p>
-          <h2 class="display-lg reveal d-1">Quiet results, loud reviews</h2>
-        </div>
-        <div class="carousel__nav reveal d-2" data-nav-for="rev"></div>
+  <!-- success stories -->
+  <section class="section section--tight">
+    <div class="container carousel" data-carousel>
+      <div class="sec-head sec-head--center" style="align-items:center">
+        <h2 class="display-lg reveal">Success Stories</h2>
+        <p class="sub reveal d-1">Rated 4.9 from 300+ patient reviews on Google</p>
       </div>
-      <div class="carousel" data-carousel id="rev-carousel">
-        <div class="carousel__track">
-          <article class="review-card reveal">
-            <div class="stars">★★★★★</div>
-            <p>“I told Dr. Tan I didn’t want anyone at work to notice anything. Three months of skin boosters later, people just keep asking if I’ve been sleeping better.”</p>
-            <b>Mei Xin, 34</b>
-          </article>
-          <article class="review-card reveal d-1">
-            <div class="stars">★★★★★</div>
-            <p>“The consultation felt more like a conversation than a sales pitch. They actually talked me out of a treatment I didn’t need.”</p>
-            <b>Priya, 41</b>
-          </article>
-          <article class="review-card reveal d-2">
-            <div class="stars">★★★★★</div>
-            <p>“My pigmentation has faded so gradually and naturally that even my mum couldn’t say what changed — just that I look fresher.”</p>
-            <b>Hui Ling, 38</b>
-          </article>
-          <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>“First time doing anything aesthetic. They explained every step, every ringgit, and followed up two days after. That aftercare call won me over.”</p>
-            <b>Amanda, 29</b>
-          </article>
-          <article class="review-card">
-            <div class="stars">★★★★★</div>
-            <p>“很专业也很温柔，完全没有推销的感觉。做完水光第二周开始，皮肤真的会自己发光。”</p>
-            <b>雅婷, 32</b>
-          </article>
-        </div>
+      <div class="carousel__track oval-pad">
+        <article class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>“I told Dr. Tan I didn’t want anyone at work to notice anything. Three months of skin boosters later, people just keep asking if I’ve been sleeping better.”</p>
+          <b>Mei Xin, 34</b>
+        </article>
+        <article class="review-card reveal d-1">
+          <div class="stars">★★★★★</div>
+          <p>“The consultation felt more like a conversation than a sales pitch. They actually talked me out of a treatment I didn’t need.”</p>
+          <b>Priya, 41</b>
+        </article>
+        <article class="review-card reveal d-2">
+          <div class="stars">★★★★★</div>
+          <p>“My pigmentation has faded so gradually and naturally that even my mum couldn’t say what changed — just that I look fresher.”</p>
+          <b>Hui Ling, 38</b>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>“First time doing anything aesthetic. They explained every step, every ringgit, and followed up two days after. That aftercare call won me over.”</p>
+          <b>Amanda, 29</b>
+        </article>
+        <article class="review-card">
+          <div class="stars">★★★★★</div>
+          <p>“很专业也很温柔，完全没有推销的感觉。做完水光第二周开始，皮肤真的会自己发光。”</p>
+          <b>雅婷, 32</b>
+        </article>
+      </div>
+      <div class="carousel__nav reveal" style="justify-content:center;margin-top:26px">
+        <button class="carousel__btn" data-prev aria-label="Previous">←</button>
+        <button class="carousel__btn" data-next aria-label="Next">→</button>
       </div>
     </div>
   </section>
 
-  <!-- steps -->
-  <section class="section">
-    <div class="container steps__grid">
-      <div class="steps__media reveal-zoom">
-        <img src="https://images.unsplash.com/photo-1589525231707-f2de2428f59c?w=900&q=80&fm=jpg&fit=crop" alt="Calm portrait after treatment" loading="lazy">
+  <!-- 3-step program -->
+  <section class="section section--tight">
+    <div class="container steps">
+      <div class="steps__spacer">
+        <svg class="line-art" viewBox="0 0 300 420" style="width:220px;opacity:.35" aria-hidden="true">
+          <path d="M96 396 C64 344 86 300 90 256 C94 212 68 194 66 146 C64 90 98 32 158 28 C218 24 250 78 246 134 C243 174 224 198 220 228 C216 258 230 288 254 312"/>
+          <path d="M140 130 C152 122 166 122 174 130"/>
+          <path d="M160 142 C157 160 150 170 158 176 C165 181 172 176 172 176"/>
+          <path d="M150 200 C162 209 178 206 188 197"/>
+        </svg>
       </div>
       <div>
-        <p class="kicker reveal">How it works <span class="cn">美学旅程</span></p>
-        <h2 class="display-lg reveal d-1">Your journey, in three gentle steps</h2>
-        <div class="accordion reveal d-2" style="margin-top:34px">
+        <h2 class="display-lg reveal">A 3-Step Program for Healthy, Radiant Skin</h2>
+        <div class="accordion reveal d-1">
           <div class="acc-item">
-            <button class="acc-item__head"><span><span class="idx">一</span>Consultation &amp; skin analysis</span><span class="acc-item__icon">+</span></button>
+            <button class="acc-item__head"><span>Step 1: Consultation &amp; Skin Analysis</span><span class="acc-item__icon">+</span></button>
             <div class="acc-item__body"><p>Every journey begins with a doctor consultation and a proper skin analysis — your history, your habits, your goals. No treatment is ever booked before this conversation.</p></div>
           </div>
           <div class="acc-item">
-            <button class="acc-item__head"><span><span class="idx">二</span>A treatment plan made for you</span><span class="acc-item__icon">+</span></button>
+            <button class="acc-item__head"><span>Step 2: Targeted Treatment &amp; Care</span><span class="acc-item__icon">+</span></button>
             <div class="acc-item__body"><p>We design a bespoke plan around your skin and your calendar — sequencing treatments so results build naturally, without downtime disrupting your life.</p></div>
           </div>
           <div class="acc-item">
-            <button class="acc-item__head"><span><span class="idx">三</span>Aftercare &amp; maintenance</span><span class="acc-item__icon">+</span></button>
-            <div class="acc-item__body"><p>Healing is part of the treatment. We check in personally after each visit and adjust your maintenance plan season by season, so your results quietly last.</p></div>
+            <button class="acc-item__head"><span>Step 3: Aftercare &amp; Long-Term Maintenance</span><span class="acc-item__icon">+</span></button>
+            <div class="acc-item__body"><p>Healing is part of the treatment. We check in personally after each visit and adjust your maintenance plan season by season, so results quietly last.</p></div>
           </div>
         </div>
-        <div class="reveal d-3" style="margin-top:36px"><a class="btn btn--solid" href="contact.html">Begin with a consultation</a></div>
+        <div class="reveal d-2" style="margin-top:32px"><a class="btn btn--boxed" href="treatments.html">Learn More</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- stat tiles -->
+  <section class="section section--tight">
+    <div class="container stats">
+      <div class="stat-tile stat-tile--arch reveal">
+        <b data-count="10" data-suffix="+">0</b>
+        <span>Years of combined clinical experience</span>
+        <p>Our experienced team strives to provide a positive, stress-free experience.</p>
+      </div>
+      <div class="stat-tile stat-tile--plain reveal d-1">
+        <b data-count="6000" data-suffix="+">0</b>
+        <span>Treatments performed with care</span>
+        <p>Planned by doctors, delivered gently, followed up personally.</p>
+      </div>
+      <div class="stat-tile stat-tile--dark reveal d-2">
+        <b data-count="98" data-suffix="%">0</b>
+        <span>Of guests say they would return</span>
+        <p>Quiet results, honest advice — that is why guests stay.</p>
       </div>
     </div>
   </section>
 
   <!-- price guide -->
-  <section class="section section--tight">
+  <section class="section">
     <div class="container">
-      <div class="services-head">
+      <div class="sec-head">
         <div>
-          <p class="kicker reveal">Price guide <span class="cn">价目参考</span></p>
-          <h2 class="display-lg reveal d-1">Honest pricing, no surprises</h2>
+          <h2 class="display-lg reveal">Price Guide</h2>
+          <p class="reveal d-1">We treat every guest as an individual and create treatment plans to fit your specific needs.</p>
         </div>
-        <a class="btn btn--outline reveal d-2" href="pricing.html">Full price guide</a>
+        <a class="btn btn--boxed reveal d-2" href="pricing.html">Full Price Guide</a>
       </div>
       <div class="price-cols">
         <div class="price-card reveal">
-          <div class="price-card__head"><h3>Facial &amp; skin health</h3><span class="cn">焕肤护理</span></div>
+          <div class="price-card__head"><h3>Facial &amp; Skin Health</h3><span class="cn">焕肤护理</span></div>
           <ul>
-            <li>Signature medical facial <span class="price">RM 380</span></li>
-            <li>Deep-cleansing peel <span class="price">RM 320</span></li>
-            <li>LED recovery therapy <span class="price">RM 180</span></li>
-            <li>Hydrating infusion <span class="price">RM 420</span></li>
+            <li><span class="name">Signature medical facial</span><span class="price">RM 380</span></li>
+            <li><span class="name">Deep-cleansing peel</span><span class="price">RM 320</span></li>
+            <li><span class="name">LED recovery therapy</span><span class="price">RM 180</span></li>
+            <li><span class="name">Hydrating infusion</span><span class="price">RM 420</span></li>
+            <li><span class="name">Post-treatment recovery facial</span><span class="price">RM 260</span></li>
           </ul>
-          <p class="note">Add-on to any treatment from RM 120.</p>
+          <div class="more"><a class="text-link" href="pricing.html">View More <span class="arr">→</span></a></div>
         </div>
         <div class="price-card reveal d-1">
           <div class="price-card__head"><h3>Injectables</h3><span class="cn">注射美学</span></div>
           <ul>
-            <li>Skin boosters <span class="price">from RM 980</span></li>
-            <li>Wrinkle-relaxing injections <span class="price">from RM 600</span></li>
-            <li>Dermal fillers <span class="price">from RM 1,500</span></li>
-            <li>Profile harmonisation <span class="price">on consult</span></li>
+            <li><span class="name">Skin boosters</span><span class="price">from RM 980</span></li>
+            <li><span class="name">Wrinkle-relaxing — one area</span><span class="price">from RM 600</span></li>
+            <li><span class="name">Wrinkle-relaxing — three areas</span><span class="price">from RM 1,500</span></li>
+            <li><span class="name">Dermal filler (per ml)</span><span class="price">from RM 1,500</span></li>
+            <li><span class="name">Lip refinement</span><span class="price">from RM 1,300</span></li>
           </ul>
-          <p class="note">All injectables performed by doctors only.</p>
+          <div class="more"><a class="text-link" href="pricing.html">View More <span class="arr">→</span></a></div>
         </div>
         <div class="price-card reveal d-2">
-          <div class="price-card__head"><h3>Laser &amp; lifting</h3><span class="cn">激光与提拉</span></div>
+          <div class="price-card__head"><h3>Laser &amp; Lifting</h3><span class="cn">激光与提拉</span></div>
           <ul>
-            <li>Pico laser (pigmentation) <span class="price">from RM 650</span></li>
-            <li>Carbon laser peel <span class="price">RM 480</span></li>
-            <li>HIFU lifting (full face) <span class="price">from RM 2,200</span></li>
-            <li>HIFU (jawline focus) <span class="price">from RM 1,200</span></li>
+            <li><span class="name">Pico laser — pigmentation</span><span class="price">from RM 650</span></li>
+            <li><span class="name">Carbon laser peel</span><span class="price">RM 480</span></li>
+            <li><span class="name">HIFU — full face</span><span class="price">from RM 2,200</span></li>
+            <li><span class="name">HIFU — face &amp; neck</span><span class="price">from RM 2,800</span></li>
+            <li><span class="name">HIFU — jawline focus</span><span class="price">from RM 1,200</span></li>
           </ul>
-          <p class="note">Course pricing available after skin review.</p>
+          <div class="more"><a class="text-link" href="pricing.html">View More <span class="arr">→</span></a></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- booking -->
-  <section class="section booking">
-    <div class="container booking__grid">
-      <div>
-        <p class="kicker reveal">Schedule your visit <span class="cn">预约</span></p>
-        <h2 class="display-lg reveal d-1">Take the first step — the rest is on us</h2>
-        <p class="reveal d-2" style="margin-top:18px">Leave your details and our care team will call you back within one working day to arrange your consultation. Prefer to chat? <a href="https://wa.me/60123456789" style="text-decoration:underline">WhatsApp us</a> any time.</p>
+  <!-- journal -->
+  <section class="section" style="background:var(--peach)">
+    <div class="container">
+      <div class="sec-head sec-head--center" style="align-items:center">
+        <h2 class="display-lg reveal">From the Journal</h2>
       </div>
-      <form class="form-grid" data-demo>
-        <div class="field field--select">
-          <label for="b-service">Treatment of interest</label>
-          <select id="b-service">
-            <option>Not sure yet — consultation first</option>
-            <option>Skin boosters</option>
-            <option>Signature medical facial</option>
-            <option>Wrinkle-relaxing injections</option>
-            <option>Dermal fillers</option>
-            <option>Pico laser</option>
-            <option>HIFU lifting</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="b-date">Preferred date</label>
-          <input id="b-date" type="date">
-        </div>
-        <div class="field">
-          <label for="b-name">Your name</label>
-          <input id="b-name" type="text" placeholder="How should we address you?" required>
-        </div>
-        <div class="field">
-          <label for="b-phone">Phone / WhatsApp</label>
-          <input id="b-phone" type="tel" placeholder="+60 12-345 6789" required>
-        </div>
-        <div class="field full">
-          <label for="b-notes">Anything we should know?</label>
-          <textarea id="b-notes" placeholder="Skin concerns, allergies, or questions — optional"></textarea>
-        </div>
-        <div class="full">
-          <button class="btn btn--solid" type="submit">Request an appointment</button>
-          <p class="form-note">We reply within one working day. Your details stay private — always.</p>
-        </div>
-      </form>
+      <div class="card-row">
+        <article class="j-card reveal">
+          <div class="j-card__media"><img src="https://images.unsplash.com/photo-1619235327941-c0e47a3ac74a?w=700&q=80&fm=jpg&fit=crop" alt="Natural light portrait" loading="lazy"></div>
+          <div class="j-card__body">
+            <p class="j-card__meta">Skin Health</p>
+            <h3>Glass skin, gently: what actually builds luminosity</h3>
+            <a class="text-link" href="treatment-skin-booster.html">Read More <span class="arr">→</span></a>
+          </div>
+        </article>
+        <article class="j-card reveal d-1">
+          <div class="j-card__media"><img src="https://images.unsplash.com/photo-1722350553295-ba84043b64cc?w=700&q=80&fm=jpg&fit=crop" alt="Facial treatment in progress" loading="lazy"></div>
+          <div class="j-card__body">
+            <p class="j-card__meta">Treatments</p>
+            <h3>Pigmentation in tropical climates — why patience wins</h3>
+            <a class="text-link" href="treatments.html">Read More <span class="arr">→</span></a>
+          </div>
+        </article>
+        <article class="j-card reveal d-2">
+          <div class="j-card__media"><img src="https://images.unsplash.com/photo-1768235146463-328c98e7234d?w=700&q=80&fm=jpg&fit=crop" alt="Skincare cream on wooden stand" loading="lazy"></div>
+          <div class="j-card__body">
+            <p class="j-card__meta">Aftercare</p>
+            <h3>The 48 hours after treatment: a gentle survival guide</h3>
+            <a class="text-link" href="treatment-skin-booster.html">Read More <span class="arr">→</span></a>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
-  <!-- closing quote -->
+  <!-- products -->
+  <section class="section">
+    <div class="container">
+      <div class="sec-head">
+        <h2 class="display-lg reveal">Clinic-Grade Skincare</h2>
+        <a class="btn btn--boxed reveal d-1" href="contact.html">Ask Us In Clinic</a>
+      </div>
+      <div class="card-row">
+        <article class="p-card reveal">
+          <div class="p-card__media"><img src="https://images.unsplash.com/photo-1599022484220-967921f2217c?w=600&q=80&fm=jpg&fit=crop" alt="Recovery serum bottle" loading="lazy"></div>
+          <h3>Barrier Recovery Serum</h3>
+          <p class="price">RM 260</p>
+        </article>
+        <article class="p-card reveal d-1">
+          <div class="p-card__media"><img src="https://images.unsplash.com/photo-1768235146463-328c98e7234d?w=600&q=80&fm=jpg&fit=crop" alt="Hydration cream jar" loading="lazy"></div>
+          <h3>Deep Hydration Cream</h3>
+          <p class="price">RM 220</p>
+        </article>
+        <article class="p-card reveal d-2">
+          <div class="p-card__media"><img src="https://images.unsplash.com/photo-1585652757141-8837d676fac8?w=600&q=80&fm=jpg&fit=crop" alt="Daily sunscreen" loading="lazy"></div>
+          <h3>Daily Defense SPF 50</h3>
+          <p class="price">RM 180</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- appointment -->
+  <section class="section section--tight">
+    <div class="container appt">
+      <div class="appt__panel">
+        <span class="chip reveal">Schedule Your Visit Online</span>
+        <h2 class="display-md reveal d-1">Take the next step and schedule an appointment today</h2>
+        <p class="sub reveal d-1">It just takes a few minutes to book a visit online.</p>
+        <form class="form-grid reveal d-2" data-demo>
+          <div class="field field--select">
+            <label for="b-service">Service</label>
+            <select id="b-service">
+              <option>Not sure yet — consultation first</option>
+              <option>Skin boosters</option>
+              <option>Signature medical facial</option>
+              <option>Wrinkle-relaxing injections</option>
+              <option>Dermal fillers</option>
+              <option>Pico laser</option>
+              <option>HIFU lifting</option>
+            </select>
+          </div>
+          <div class="field field--select">
+            <label for="b-doctor">Doctor</label>
+            <select id="b-doctor">
+              <option>No preference</option>
+              <option>Dr. Chloe Tan</option>
+              <option>Dr. Wei Lin Ong</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="b-name">Your Name *</label>
+            <input id="b-name" type="text" placeholder="How should we address you?" required>
+          </div>
+          <div class="field">
+            <label for="b-phone">Your Phone</label>
+            <input id="b-phone" type="tel" placeholder="+60 12-345 6789" required>
+          </div>
+          <div class="field">
+            <label for="b-date">Date</label>
+            <input id="b-date" type="date">
+          </div>
+          <div class="field">
+            <label for="b-time">Time</label>
+            <input id="b-time" type="time">
+          </div>
+          <div class="full">
+            <button class="btn btn--solid" type="submit" style="width:100%">Make An Appointment</button>
+            <p class="form-note">We reply within one working day. Your details stay private — always.</p>
+          </div>
+        </form>
+      </div>
+      <div class="appt__media reveal-zoom">
+        <img src="https://images.unsplash.com/photo-1710268503300-46e81bd17955?w=800&q=80&fm=jpg&fit=crop" alt="Quiet moment with flowers" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- quote -->
   <section class="section quoteband">
     <div class="container">
       <div class="stars reveal">★★★★★</div>
       <blockquote class="reveal d-1">“The rare clinic that treats your face like a portrait, not a project.”</blockquote>
-      <p class="sub reveal d-2">Rated 4.9 from 300+ patient reviews</p>
+      <p class="sub reveal d-2">4.9 rating based on 300+ reviews</p>
+    </div>
+  </section>
+
+  <!-- instagram -->
+  <section class="ig">
+    <div class="container"><p class="ig__label reveal">Instagram @eterna.kl</p></div>
+    <div class="ig__row">
+      <a href="#" aria-label="Instagram post"><img src="https://images.unsplash.com/photo-1593260853607-d0e0f639bdab?w=400&h=400&fit=crop&q=70&fm=jpg" alt="" loading="lazy"></a>
+      <a href="#" aria-label="Instagram post"><img src="https://images.unsplash.com/photo-1731355771317-b2ab72c79124?w=400&h=400&fit=crop&q=70&fm=jpg" alt="" loading="lazy"></a>
+      <a href="#" aria-label="Instagram post"><img src="https://images.unsplash.com/photo-1768235146463-328c98e7234d?w=400&h=400&fit=crop&q=70&fm=jpg" alt="" loading="lazy"></a>
+      <a href="#" aria-label="Instagram post"><img src="https://images.unsplash.com/photo-1589525231707-f2de2428f59c?w=400&h=400&fit=crop&q=70&fm=jpg" alt="" loading="lazy"></a>
+      <a href="#" aria-label="Instagram post"><img src="https://images.unsplash.com/photo-1740297165018-1431d45d8f11?w=400&h=400&fit=crop&q=70&fm=jpg" alt="" loading="lazy"></a>
     </div>
   </section>
 
@@ -429,75 +524,61 @@
 
 <!-- footer -->
 <footer class="footer">
+  <svg class="footer__art line-art line-art--light" viewBox="0 0 300 420" aria-hidden="true">
+    <path d="M96 396 C64 344 86 300 90 256 C94 212 68 194 66 146 C64 90 98 32 158 28 C218 24 250 78 246 134 C243 174 224 198 220 228 C216 258 230 288 254 312"/>
+    <path d="M140 130 C152 122 166 122 174 130"/>
+    <path d="M160 142 C157 160 150 170 158 176 C165 181 172 176 172 176"/>
+    <path d="M150 200 C162 209 178 206 188 197"/>
+    <path d="M120 262 C150 286 196 282 224 258"/>
+  </svg>
   <div class="container">
     <div class="footer__grid">
       <div>
         <a class="logo" href="index.html" aria-label="Éterna Clinic — home">
-          <svg width="40" height="56" viewBox="0 0 40 56" fill="none" aria-hidden="true">
-            <ellipse cx="20" cy="28" rx="18.5" ry="26.5" stroke="#EAE0D3" stroke-width="1"/>
-            <ellipse cx="20" cy="28" rx="15.5" ry="23.5" stroke="#EAE0D3" stroke-width=".7"/>
-            <text x="20" y="36.5" text-anchor="middle" font-family="Marcellus, serif" font-size="21" fill="#EAE0D3">É</text>
+          <svg width="44" height="62" viewBox="0 0 40 56" fill="none" aria-hidden="true">
+            <ellipse cx="20" cy="28" rx="18.5" ry="26.5" stroke="#46362F" stroke-width="1"/>
+            <ellipse cx="20" cy="28" rx="15.5" ry="23.5" stroke="#46362F" stroke-width=".7"/>
+            <text x="20" y="36.5" text-anchor="middle" font-family="Marcellus, serif" font-size="21" fill="#46362F">É</text>
           </svg>
           <span class="logo__text">
             <span class="logo__name">ÉTERNA</span>
             <span class="logo__sub">依特娜</span>
           </span>
         </a>
-        <p class="footer__about">A medical aesthetics clinic built around one belief: beauty is not about changing yourself, but returning to your best state.</p>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-.9.6-.3.3-.5.5-.6.9-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6.9.3.3.5.5.9.6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3.9-.6.3-.3.5-.5.6-.9.1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-.9-.3-.3-.5-.5-.9-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 8.9a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm5.6-9.1a1.3 1.3 0 1 1-2.5 0 1.3 1.3 0 0 1 2.5 0z"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V21h3.4z"/></svg></a>
-          <a href="https://wa.me/60123456789" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.1 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 4 2.2.9 2.7.7 3.2.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.5 7.5 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5z"/></svg></a>
-          <a href="#" aria-label="Xiaohongshu / RED"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 18.5v-13zM7 9v6h1.8v-2.1h1.4L11.4 15h2l-1.4-2.4c.8-.3 1.3-1 1.3-1.9 0-1.2-.9-2-2.2-2H7zm1.8 1.5h1.9c.5 0 .8.3.8.7s-.3.7-.8.7H8.8v-1.4zM14.5 9v1.5h1.2V15h1.8v-4.5h1.2V9h-4.2z"/></svg></a>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <div class="footer__meta">
+          <span>Unit 3-2, Jalan Setia 1,<br>50480 Kuala Lumpur</span>
+          <span>Tue – Sun: 10am – 7pm<br>Closed Mondays · By appointment</span>
         </div>
       </div>
       <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Éterna</a></li>
-          <li><a href="treatments.html">Treatments</a></li>
-          <li><a href="pricing.html">Price guide</a></li>
-          <li><a href="contact.html">Contact &amp; booking</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Treatments</h4>
-        <ul>
-          <li><a href="treatment-skin-booster.html">Skin boosters</a></li>
-          <li><a href="treatment-skin-booster.html">Signature facial</a></li>
-          <li><a href="treatment-skin-booster.html">Pico laser</a></li>
-          <li><a href="treatment-skin-booster.html">HIFU lifting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Visit us</h4>
+        <h4>Say Hello</h4>
         <div class="footer__meta">
-          <span>Unit 3-2, Jalan Setia 1,<br>50480 Kuala Lumpur</span>
-          <span>Tue – Sun · 10am – 7pm<br>Closed Mondays</span>
           <a href="tel:+60312345678">+60 3-1234 5678</a>
           <a href="mailto:hello@eternaclinic.com.my">hello@eternaclinic.com.my</a>
+        </div>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.2h2.8V21h3.4z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.3-.1 1.7-.1 4.9-.1zm0 2c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.4.2-.7.3-.9.6-.3.3-.5.5-.6.9-.1.3-.3.7-.3 1.8-.1 1.3-.1 1.7-.1 4.8s0 3.5.1 4.8c.1 1.1.2 1.5.3 1.8.2.4.3.7.6.9.3.3.5.5.9.6.3.1.7.3 1.8.3 1.3.1 1.7.1 4.8.1s3.5 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.4-.2.7-.3.9-.6.3-.3.5-.5.6-.9.1-.3.3-.7.3-1.8.1-1.3.1-1.7.1-4.8s0-3.5-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.4-.3-.7-.6-.9-.3-.3-.5-.5-.9-.6-.3-.1-.7-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.4a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 8.9a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm5.6-9.1a1.3 1.3 0 1 1-2.5 0 1.3 1.3 0 0 1 2.5 0z"/></svg></a>
+          <a href="https://wa.me/60123456789" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.1 4c-.2 0-.5.1-.7.4-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 4 2.2.9 2.7.7 3.2.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-2-1.2 7.5 7.5 0 0 1-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.4-.6-.4h-.5z"/></svg></a>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2026 Éterna Clinic. All rights reserved.</span>
-      <span class="cn">永恒之美，为你定制</span>
+      <nav>
+        <a href="index.html" class="is-active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="treatments.html">Treatments</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="note">© 2026 Éterna Clinic · All rights reserved<span class="cn">永恒之美，为你定制</span></p>
     </div>
   </div>
 </footer>
 
 <script src="assets/js/main.js"></script>
-<script>
-/* wire carousel nav buttons (kept out of main.js so each page stays standalone) */
-document.querySelectorAll('[data-nav-for]').forEach(nav => {
-  const id = nav.dataset.navFor;
-  const car = document.getElementById(id + '-carousel');
-  if (!car) return;
-  nav.innerHTML = '<button class="carousel__btn" data-prev aria-label="Previous">←</button><button class="carousel__btn" data-next aria-label="Next">→</button>';
-  const track = car.querySelector('.carousel__track');
-  nav.querySelector('[data-prev]').addEventListener('click', () => track.scrollBy({left: -track.children[0].getBoundingClientRect().width - 32, behavior:'smooth'}));
-  nav.querySelector('[data-next]').addEventListener('click', () => track.scrollBy({left: track.children[0].getBoundingClientRect().width + 32, behavior:'smooth'}));
-});
-</script>
 </body>
 </html>
