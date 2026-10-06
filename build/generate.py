@@ -24,7 +24,8 @@ sys.path.insert(0, str(ROOT / "build"))
 from content import ABOUT, CATEGORIES, CLINIC, CONCERN_CARDS, HOME, T  # noqa: E402
 
 SRC = Path.home() / "Downloads" / "ETERNA WEBSITE IMAGES"
-OUT = ROOT / "assets" / "img"
+SITE = ROOT / "v2"
+OUT = SITE / "assets" / "img"
 CREAM = (241, 233, 222)
 CAT = {c["slug"]: c for c in CATEGORIES}
 
@@ -636,7 +637,7 @@ def hero_split(pg, spec, chip, title, leads, flip=False, extra="", tag="h1", eag
 
 
 def write(path, text):
-    path = ROOT / path
+    path = SITE / path
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
 
@@ -1008,7 +1009,7 @@ def main():
     if OUT.exists():
         shutil.rmtree(OUT)
     OUT.mkdir(parents=True)
-    old = ROOT / "treatments"
+    old = SITE / "treatments"
     if old.exists():
         shutil.rmtree(old)
     n_icons = mission_icons()

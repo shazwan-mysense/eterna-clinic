@@ -8,16 +8,23 @@ free stand-in for Tan Mon Cheri, Montserrat, Noto Serif/Sans SC).
 Content follows the client brief **"ÉTERNA WEBSITE .pdf" (Oct 2026)** and all photography comes
 from the client's **"ETERNA WEBSITE IMAGES"** folder.
 
-## Pages (53)
+## Versions
+
+| Link | What it is |
+|---|---|
+| `/v2/` | **Current.** Client brief applied (53 pages). The site root redirects here. |
+| `/v1/` | Previous mockup: the 6-page Pure Skin template clone with placeholder content and stock photos, before the client's amendments (commit `3be92e0`). Kept as-is for reference. |
+
+## Pages in v2 (53)
 
 | Path | Page |
 |---|---|
-| `index.html` | Home |
-| `about.html` | About Us |
-| `contact.html` | Contact + booking form + Google Map |
-| `treatments.html` | Treatments landing (all 10 categories) |
-| `treatments/<category>.html` | 9 category pages (Botox links straight to its treatment page) |
-| `treatments/<treatment>.html` | 41 treatment pages |
+| `v2/index.html` | Home |
+| `v2/about.html` | About Us |
+| `v2/contact.html` | Contact + booking form + Google Map |
+| `v2/treatments.html` | Treatments landing (all 10 categories) |
+| `v2/treatments/<category>.html` | 9 category pages (Botox links straight to its treatment page) |
+| `v2/treatments/<treatment>.html` | 41 treatment pages |
 
 ## How to edit
 
@@ -29,7 +36,8 @@ python3 build/generate.py
 
 - `build/content.py` holds all copy, the category structure, and which client photo goes where.
 - `build/generate.py` holds the page layouts, header/footer, and the image pipeline.
-- `assets/css/style.css` and `assets/js/main.js` are hand-written.
+- `v2/assets/css/style.css` and `v2/assets/js/main.js` are hand-written.
+- The script writes the pages and images into `v2/`. Never edit `v1/`.
 
 The image pipeline reads the client folder at `~/Downloads/ETERNA WEBSITE IMAGES`, converts
 everything to WebP (about 10 MB total, down from ~34 MB), and makes any crops deliberately at build
