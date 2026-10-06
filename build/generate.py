@@ -61,7 +61,7 @@ def img(spec):
     key = (rel, mode, focus)
     if key in _cache:
         return _cache[key]
-    path = SRC / rel
+    path = ROOT / "build" / rel if rel.startswith("stock/") else SRC / rel
     raw = path.read_bytes()
     digest = hashlib.md5(raw).hexdigest()[:8]
     hkey = (digest, mode, focus)

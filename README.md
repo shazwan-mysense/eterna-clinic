@@ -40,18 +40,30 @@ build stops if the same photo would appear twice on one page.
 
 1. **Pink Booster** is listed under Skin Boosters but the brief has no copy for it. It shows as a
    card with an "Enquire" button until the copy arrives.
-2. **Pink Peel** has full copy in the brief but no images and no place in the treatment
-   navigation. It is built and listed under Pigmentation with a "photo to come" placeholder.
-3. **Face Contouring vs Body Contouring.** The navigation structure and home cards say "Face
+2. **Face Contouring vs Body Contouring.** The navigation structure and home cards say "Face
    Contouring", the Treatments landing notes say "Body Contouring". The site uses Face Contouring.
+3. **Pink Peel placement.** It has copy in the brief but no place in the treatment navigation, so
+   it is listed under Pigmentation.
 4. **Social links.** Facebook and Instagram icons are placeholders (`#`); WhatsApp is live.
-5. **Booking form** is a demo. It needs connecting to the clinic (Elementor form, WhatsApp or a
-   booking system).
+5. **Booking form** is a demo. It needs connecting to the clinic (Elementor form email,
+   WhatsApp or a booking system).
 6. **Low-resolution sources** that look soft on retina screens: Red Carpet Glow card
    (332 px), Face Lifting cover (307 px), Acne & Scars and Botox covers (~420 px),
    PRP blood-draw photo (617 px).
 7. **Small copy corrections made:** "SIGNATRUE SECRETOME" → "Signature Secretome"; "I mmediate"
    → "Immediate". Everything else is verbatim from the brief.
+
+## Stock photos (to replace with the clinic's own if available)
+
+The client folder had no images for these, so free Pexels photos are used (`build/stock/`,
+Pexels licence, no attribution required):
+
+| Where | Pexels photo |
+|---|---|
+| Pink Peel hero | 9774871 |
+| Pink Peel card | 9774854 |
+| Pink Peel "How it works" | 9774600 |
+| PRP Face hero | 4040563 |
 
 ## Elementor rebuild notes
 

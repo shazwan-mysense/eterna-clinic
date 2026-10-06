@@ -313,12 +313,14 @@ T["renewal-retinol-peel"] = dict(
     ])
 
 T["pink-peel"] = dict(
-    name="Pink Peel", cat="pigmentation", hero_mode="text", hero=None, thumb=None,
+    name="Pink Peel", cat="pigmentation",
+    hero="stock/pink-peel-hero-pexels-9774871.jpg", thumb=("stock/pink-peel-card-pexels-9774854.jpg", "45", (0.4, 0.5)),
     lead="A professional peel designed for selected intimate or friction-prone areas where uneven tone or dull-looking skin may develop.",
     blocks=[
         ("acc", [(HOW, "Selected exfoliating ingredients help remove surface buildup and support more even-looking skin in appropriate treatment areas."),
                  (COMFORT, "Mild sensitivity, dryness or light peeling may occur temporarily depending on the area and individual skin response."),
-                 (RESULTS, "Improvement develops progressively. Follow the recommended aftercare, avoid unnecessary friction and use appropriate skincare for the treated area.")], None),
+                 (RESULTS, "Improvement develops progressively. Follow the recommended aftercare, avoid unnecessary friction and use appropriate skincare for the treated area.")],
+         "stock/pink-peel-how-pexels-9774600.jpg"),
         ("benefits", "5 Key Benefits", ["Helps improve uneven-looking tone", "Supports a brighter-looking appearance", "Refines rough surface texture", "Helps refresh dull-looking skin", "Designed for selected delicate areas"], None),
         ("who", "Who Is It For?", [("Uneven Intimate-Area Tone", None), ("Inner-Thigh Discolouration", None), ("Underarm Darkening", None), ("Friction-Related Dullness", None), ("Rough or Uneven Texture", None)]),
     ])
@@ -497,7 +499,7 @@ T["elesome-skinbooster"] = dict(
 
 PR = "Skin Booster/PRP Face/"
 T["prp-face"] = dict(
-    name="PRP Face", cat="skin-boosters", hero_mode="text", hero=None,
+    name="PRP Face", cat="skin-boosters", hero="stock/prp-hero-pexels-4040563.jpg",
     lead="PRP uses platelet-rich plasma prepared from your own blood as part of a regenerative treatment that supports skin renewal and overall skin quality.",
     thumb=(PR + "PRP-Skin-Treatment.webp", "45"),
     blocks=[
