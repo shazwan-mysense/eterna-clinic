@@ -1,62 +1,64 @@
-# Éterna Clinic — website mockup
+# ÉTERNA Clinic: website mockup
 
-Six-page static mockup for the Éterna medical aesthetics clinic (依特娜医美诊所),
-designed to be rebuilt 1:1 in **WordPress + Elementor Pro**.
+Static mockup for ÉTERNA Clinic (依特娜医美诊所), Desa ParkCity, Kuala Lumpur, to be rebuilt in
+**WordPress + Elementor Pro**. The design is a re-skin of the CMSMasters **Pure Skin** template
+with the ÉTERNA brand kit (cream `#EAE0D3`, taupe `#CCBBAA`, brown `#5B473E`; Marcellus as a
+free stand-in for Tan Mon Cheri, Montserrat, Noto Serif/Sans SC).
 
-Design direction follows the CMSMasters **Pure Skin** template the client liked
-(currently imported at eternaclinic.com.my/pure-skin-home/), re-skinned with the
-Éterna brand kit: cream `#EAE0D3` · taupe `#CCBBAA` · brown `#5B473E`,
-Marcellus (stand-in for Tan Mon Cheri) + Montserrat + Noto Serif/Sans SC.
+Content follows the client brief **"ÉTERNA WEBSITE .pdf" (Oct 2026)** and all photography comes
+from the client's **"ETERNA WEBSITE IMAGES"** folder.
 
-## Pages
+## Pages (53)
 
-| File | Page |
+| Path | Page |
 |---|---|
 | `index.html` | Home |
-| `about.html` | About / brand story |
-| `treatments.html` | All treatments |
-| `treatment-skin-booster.html` | Treatment detail (master layout — reuse for the other 5) |
-| `pricing.html` | Full price guide |
-| `contact.html` | Contact + booking |
+| `about.html` | About Us |
+| `contact.html` | Contact + booking form + Google Map |
+| `treatments.html` | Treatments landing (all 10 categories) |
+| `treatments/<category>.html` | 9 category pages (Botox links straight to its treatment page) |
+| `treatments/<treatment>.html` | 41 treatment pages |
 
-Open `index.html` directly in a browser — no build step, no dependencies.
+## How to edit
 
-## ⚠️ Placeholder facts — confirm with client before launch
+Pages are generated, so edit the source and rebuild rather than editing the HTML:
 
-Every business fact below is **invented for the mockup**:
+```bash
+python3 build/generate.py
+```
 
-- Address: "Unit 3-2, Jalan Setia 1, 50480 Kuala Lumpur"
-- Phone +60 3-1234 5678 / WhatsApp +60 12-345 6789
-- Email hello@eternaclinic.com.my
-- Hours: Tue–Sun 10am–7pm, closed Mondays
-- Doctors/team names: Dr. Chloe Tan, Dr. Wei Lin Ong, Sandra Lim
-- All stats (10+ years, 6,000+ treatments, 98%, 4.9 rating / 300+ reviews)
-- All prices (RM) and treatment claims/durations
-- All testimonials (written for the mockup)
-- Treatment menu itself (6 services assumed — confirm actual services & licensing,
-  e.g. whether injectables can be advertised under Malaysian regulations)
+- `build/content.py` holds all copy, the category structure, and which client photo goes where.
+- `build/generate.py` holds the page layouts, header/footer, and the image pipeline.
+- `assets/css/style.css` and `assets/js/main.js` are hand-written.
 
-Images are hotlinked Unsplash stock (Asian-looking models per brief) — replace
-with the clinic's own photography for launch.
+The image pipeline reads the client folder at `~/Downloads/ETERNA WEBSITE IMAGES`, converts
+everything to WebP (about 10 MB total, down from ~34 MB), and makes any crops deliberately at build
+time. Every photo is shown in a frame of its own ratio, with no overlays, tints or filters. The
+build stops if the same photo would appear twice on one page.
+
+## Open items to confirm with the client
+
+1. **Pink Booster** is listed under Skin Boosters but the brief has no copy for it. It shows as a
+   card with an "Enquire" button until the copy arrives.
+2. **Pink Peel** has full copy in the brief but no images and no place in the treatment
+   navigation. It is built and listed under Pigmentation with a "photo to come" placeholder.
+3. **Face Contouring vs Body Contouring.** The navigation structure and home cards say "Face
+   Contouring", the Treatments landing notes say "Body Contouring". The site uses Face Contouring.
+4. **Social links.** Facebook and Instagram icons are placeholders (`#`); WhatsApp is live.
+5. **Booking form** is a demo. It needs connecting to the clinic (Elementor form, WhatsApp or a
+   booking system).
+6. **Low-resolution sources** that look soft on retina screens: Red Carpet Glow card
+   (332 px), Face Lifting cover (307 px), Acne & Scars and Botox covers (~420 px),
+   PRP blood-draw photo (617 px).
+7. **Small copy corrections made:** "SIGNATRUE SECRETOME" → "Signature Secretome"; "I mmediate"
+   → "Immediate". Everything else is verbatim from the brief.
 
 ## Elementor rebuild notes
 
-- **Fonts**: headings = Tan Mon Cheri (client owns license? else keep Marcellus,
-  free on Google Fonts). Body = Montserrat. Chinese = Noto Serif SC / Noto Sans SC.
-- Global colors → Elementor kit: cream `#EAE0D3`, soft `#F1E9DE`, bg `#FAF7F2`,
-  taupe `#CCBBAA`, brown `#5B473E`, deep `#46362F`, ink `#3B302A`.
-- Announcement marquee → HTML widget (same markup) or a ticker plugin.
-- Sticky shrinking header → Elementor Pro sticky header + "scrolling effect" class.
-- Reveal animations → native entrance animations (fadeInUp / zoomIn, 0.9s,
-  staggered 120ms delays).
-- Arch images → image widget with border-radius `999px 999px 0 0`.
-- Carousels (treatments, reviews) → Loop Carousel / Testimonial Carousel.
-- Accordions (steps, FAQs) → Accordion widget, first item open.
-- Counters → Counter widget.
-- Price lists → Price List widget inside a bordered container
-  (offset shadow: box-shadow `5px 5px 0 rgba(204,187,170,.22)`).
-- Booking form → Elementor Pro Form widget (fields already match).
-- Custom cursor dot → optional; HTML widget with the snippet from
-  `assets/js/main.js`, or drop it entirely for WP.
-- Oval review cards → large border-radius on a container; line-art SVGs → SVG
-  image widgets (files can be exported from the HTML).
+- Global colours: cream `#EAE0D3`, soft `#F1E9DE`, background `#FAF7F2`, taupe `#CCBBAA`,
+  brown `#5B473E`, deep `#46362F`, ink `#3B302A`.
+- Treatment pages share one layout: split hero, "About / What is", How it works (accordion or
+  component cards), Benefits panel, Who is it for (concern photo grid), related treatments, booking.
+  Build it once as a Single template and reuse.
+- Accordions use the Accordion widget (first item open), carousels use Loop Carousel, the booking
+  form maps to the Form widget, entrance animations are fadeInUp / zoomIn (0.9 s, 120 ms stagger).

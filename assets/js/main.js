@@ -134,12 +134,21 @@
     el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
   });
 
-  /* Demo form handler — no backend in this mockup */
+  /* Preselect the treatment when arriving from an "Enquire" link (?service=…) */
+  const wanted = new URLSearchParams(location.search).get('service');
+  if (wanted) {
+    document.querySelectorAll('select[name="service"]').forEach(sel => {
+      const opt = [...sel.options].find(o => o.text === wanted);
+      if (opt) sel.value = opt.value || opt.text;
+    });
+  }
+
+  /* Demo form handler: no backend in this mockup */
   document.querySelectorAll('form[data-demo]').forEach(f => {
     f.addEventListener('submit', (e) => {
       e.preventDefault();
       const note = f.querySelector('.form-note');
-      if (note) note.textContent = 'Thank you — this is a design mockup, so no booking was sent. The live site will connect this form to the clinic.';
+      if (note) note.textContent = 'Thank you. This is a design mockup, so no booking was sent. The live site will connect this form to the clinic.';
     });
   });
 })();
