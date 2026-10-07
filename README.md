@@ -38,6 +38,8 @@ python3 build/generate.py
 - `build/generate.py` holds the page layouts, header/footer, and the image pipeline.
 - `v2/assets/css/style.css` and `v2/assets/js/main.js` are hand-written.
 - The script writes the pages and images into `v2/`. Never edit `v1/`.
+- `build/fonts.py` self-hosts the fonts (no Google Fonts requests). The two Chinese fonts are
+  subset to the characters the site uses, so new Chinese text is picked up on the next build.
 
 The image pipeline reads the client folder at `~/Downloads/ETERNA WEBSITE IMAGES`, converts
 everything to WebP (about 10 MB total, down from ~34 MB), and makes any crops deliberately at build

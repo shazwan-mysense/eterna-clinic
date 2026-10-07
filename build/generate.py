@@ -206,9 +206,7 @@ def head(title, desc, p):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Marcellus+SC&family=Montserrat:wght@300;400;500;600&family=Noto+Serif+SC:wght@400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<!--FONTS:{p}-->
 <link rel="stylesheet" href="{p}assets/css/style.css">
 </head>
 <body>
@@ -996,6 +994,23 @@ def mission_icons():
     return len(groups)
 
 
+def inject_fonts():
+    """Self-host fonts: collect the Chinese characters actually used, subset, inline @font-face."""
+    import fonts
+    pages = list(SITE.rglob("*.html"))
+    chars = set()
+    for f in pages:
+        chars |= set(re.findall(r"[\u3000-\u303f\u4e00-\u9fff\uff00-\uffef]", f.read_text(encoding="utf-8")))
+    rules, preload = fonts.build(SITE, chars)
+    for f in pages:
+        s = f.read_text(encoding="utf-8")
+        m = re.search(r"<!--FONTS:([^>]*)-->", s)
+        p = m.group(1)
+        links = "".join(f'<link rel="preload" href="{p}assets/fonts/{n}" as="font" type="font/woff2" crossorigin>\n' for n in preload)
+        block = links + "<style>\n" + rules.replace("__P__", p) + "\n</style>"
+        f.write_text(s.replace(m.group(0), block), encoding="utf-8")
+
+
 def main():
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -1013,6 +1028,7 @@ def main():
             build_category(c)
     for slug in T:
         build_treatment(slug)
+    inject_fonts()
     files = list((OUT).rglob("*.webp"))
     size = sum(f.stat().st_size for f in files)
     print(json.dumps({"pages": 4 + sum(1 for c in CATEGORIES if not c.get('direct')) + len(T),
