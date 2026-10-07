@@ -168,21 +168,11 @@ def h1_of(t):
 
 
 def service_options(selected=None):
+    """Booking dropdown: one option per treatment category."""
     out = ['<option value="">Not sure yet, consultation first</option>']
     for c in CATEGORIES:
-        out.append(f'<optgroup label="{esc(c["title"])}">')
-        seen = set()
-        for m in c["members"]:
-            if isinstance(m, dict):
-                name = m["name"]
-            else:
-                name = T[m]["name"]
-            if name in seen:
-                continue
-            seen.add(name)
-            sel = " selected" if selected and name == selected else ""
-            out.append(f"<option{sel}>{esc(name)}</option>")
-        out.append("</optgroup>")
+        sel = " selected" if selected == c["title"] else ""
+        out.append(f"<option{sel}>{esc(c['title'])}</option>")
     return "\n".join(out)
 
 
@@ -378,7 +368,8 @@ def t_card(pg, entry, cat_label):
         btn = "View Treatment"
     else:
         name, desc, spec = entry["name"], entry.get("desc"), entry.get("image")
-        href = t_href(entry["page"], p, entry.get("anchor")) if entry.get("page") else f"{p}contact.html?service={quote(entry['name'])}#book"
+        cat_title = next(c["title"] for c in CATEGORIES if entry in c["members"])
+        href = t_href(entry["page"], p, entry.get("anchor")) if entry.get("page") else f"{p}contact.html?service={quote(cat_title)}#book"
         btn = "View Treatment" if entry.get("page") else "Enquire"
     media = pg.pic(spec, name) if spec else '<div class="t-card__ph">Treatment photo to come</div>'
     desc_html = f"<p>{esc(desc)}</p>" if desc else ""
@@ -694,7 +685,7 @@ def build_treatment(slug):
 
     page = (head(f"{t['name']} | ÉTERNA Clinic", t["lead"], "../") + topbar(False) + header("treatments", "../")
             + hero + "".join(body) + rel_html
-            + appt(pg, "ABOUT US/clinic 1.png", selected=t["name"])
+            + appt(pg, "ABOUT US/clinic 1.png", selected=cat["title"])
             + footer("treatments", "../"))
     write(f"treatments/{slug}.html", page)
 
@@ -713,7 +704,7 @@ def build_category(cat):
       <div class="sec-head sec-head--center"><h2 class="display-lg reveal">{esc(grid_title)}</h2></div>
       <div class="card-grid">{cards}</div>
     </div>
-  </section>""" + appt(pg, "ABOUT US/clinic 1.png") + footer("treatments", "../"))
+  </section>""" + appt(pg, "ABOUT US/clinic 1.png", selected=cat["title"]) + footer("treatments", "../"))
     write(f"treatments/{cat['slug']}.html", page)
 
 
