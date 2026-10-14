@@ -22,6 +22,23 @@
     );
   }
 
+  /* Dropdown menus that open on click as well as hover (touch screens, keyboard) */
+  document.querySelectorAll('.nav__toggle').forEach(btn => {
+    const li = btn.closest('li');
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = li.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav li.is-open').forEach(li => {
+      li.classList.remove('is-open');
+      const b = li.querySelector('.nav__toggle');
+      if (b) b.setAttribute('aria-expanded', 'false');
+    });
+  });
+
   /* Reveal on scroll (Elementor: entrance animations fadeInUp / zoomIn) */
   const revealables = document.querySelectorAll('.reveal, .reveal-zoom');
   if ('IntersectionObserver' in window && revealables.length) {
@@ -79,8 +96,8 @@
         }
       });
     });
-    /* open the first item by default */
-    const first = acc.querySelector('.acc-item');
+    /* open the first item by default, unless the accordion is marked data-collapsed */
+    const first = acc.hasAttribute('data-collapsed') ? null : acc.querySelector('.acc-item');
     if (first) {
       first.classList.add('is-open');
       const b = first.querySelector('.acc-item__body');

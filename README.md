@@ -12,7 +12,8 @@ from the client's **"ETERNA WEBSITE IMAGES"** folder.
 
 | Link | What it is |
 |---|---|
-| `/v2/` | **Current.** Client brief applied (53 pages). The site root redirects here. |
+| `/v3/` | **10-page version.** Same design and client content, condensed: Home, About Us, Contact & Booking, and 7 treatment category pages where every treatment is a section (no per-treatment pages). Built by `build/generate_v3.py`. |
+| `/v2/` | Client brief applied (53 pages, one page per treatment). The site root redirects here. |
 | `/v1/` | Previous mockup: the 6-page Pure Skin template clone with placeholder content and stock photos, before the client's amendments (commit `3be92e0`). Kept as-is for reference. |
 
 ## Pages in v2 (53)
@@ -25,6 +26,12 @@ from the client's **"ETERNA WEBSITE IMAGES"** folder.
 | `v2/treatments.html` | Treatments landing (all 10 categories) |
 | `v2/treatments/<category>.html` | 9 category pages (Botox links straight to its treatment page) |
 | `v2/treatments/<treatment>.html` | 41 treatment pages |
+
+## v3 structure (10 pages)
+
+Home · About Us · Treatments (menu only, not a page) · Contact, plus a **Book Now** button that opens the booking form on Contact.
+
+Treatment pages: Signature Facials · Acne, Scars & Pigmentation · Skin Boosters · Botox & Rejuvenation · Face Lifting & Contouring · Hair & Scalp · Wellness & Longevity. Each treatment section shows its intro, benefits and who it's for, a Book Now button (pre-fills the category on the booking form) and collapsible treatment details. Rebuild with `python3 build/generate_v3.py`; extra styles live in `build/v3-extra.css`.
 
 ## How to edit
 

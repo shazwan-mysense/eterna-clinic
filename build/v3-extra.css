@@ -1,0 +1,94 @@
+
+/* ============================================================
+   v3 additions: 10-page structure. Treatments live as sections
+   on 7 category pages; the Treatments menu item is a dropdown
+   trigger, not a page.
+   ============================================================ */
+
+html { scroll-padding-top: 150px; }
+
+/* Treatments menu trigger (a button styled like the other nav links) */
+.nav__toggle {
+  background: none; border: 0; cursor: pointer;
+  font: inherit; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--brown-deep); padding: 12px 0;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.nav__toggle:hover { color: var(--brown); }
+.nav li.is-active .nav__toggle { box-shadow: 0 2px 0 var(--brown); }
+.nav li.is-open .dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+/* the button controls the menu; focus alone shouldn't keep it open */
+.nav li:focus-within:not(.is-open):not(:hover) .dropdown { opacity: 0; visibility: hidden; transform: translateY(12px); }
+
+/* Jump-to bar under each category hero */
+.jump {
+  position: sticky; top: 84px; z-index: 40;
+  background: rgba(250, 247, 242, .97);
+  border-bottom: 1px solid var(--line);
+}
+.jump__inner { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding: 14px 0; }
+.jump__inner::-webkit-scrollbar { display: none; }
+.jump a {
+  flex-shrink: 0; white-space: nowrap;
+  font-size: 13px; color: var(--brown-deep);
+  border: 1px solid var(--line); background: var(--white);
+  padding: 8px 16px; border-radius: 999px;
+  transition: all .3s var(--ease);
+}
+.jump a:hover, .jump a.is-current { background: var(--brown); color: #F6EFE6; border-color: var(--brown); }
+
+/* One treatment = one section */
+.tx { padding: clamp(56px, 7vw, 96px) 0; border-bottom: 1px solid var(--line); }
+.tx:nth-of-type(even) { background: var(--cream-soft); }
+.tx__grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(32px, 5vw, 80px); align-items: start; }
+.tx--flip .tx__media { order: 2; }
+.tx__media { position: sticky; top: 160px; }
+.tx__body > h2 { margin-bottom: 14px; }
+.tx__body > .lead { margin-bottom: 8px; }
+.tx__h { font-size: 18px; margin: 26px 0 0; color: var(--brown); }
+.tx__body .checklist { margin: 14px 0 0; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.pills li {
+  font-size: 13px; color: var(--brown-deep);
+  background: var(--white); border: 1px solid var(--line);
+  padding: 7px 14px; border-radius: 999px;
+}
+.tx:nth-of-type(even) .pills li { background: #FDFBF8; }
+.tx__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 18px; margin-top: 30px; }
+.tx__details-label { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin-top: 36px; }
+.tx .accordion { margin-top: 12px; }
+.tx .acc-item__head { font-size: 17px; padding: 16px 4px; }
+.tx .acc-item__body .acc-content { padding: 0 8px 22px 4px; }
+.acc-content p { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 10px; }
+.acc-content p b { color: var(--brown-deep); font-weight: 600; }
+.acc-content ul { margin: 6px 0 14px; }
+.acc-content ul li { font-size: 14px; color: var(--ink-soft); display: flex; gap: 10px; align-items: baseline; margin-bottom: 6px; }
+.acc-content ul li::before { content: "✓"; color: var(--brown); font-size: 12px; font-weight: 700; }
+.acc-content ol { margin: 6px 0 14px 18px; }
+.acc-content ol li { font-size: 14px; color: var(--ink-soft); margin-bottom: 8px; padding-left: 4px; }
+.acc-content .tx__fig { margin: 8px 0 16px; }
+.acc-content .tx__pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0 16px; }
+.acc-content .suit { margin-top: 10px; padding-left: 14px; border-left: 2px solid var(--taupe); font-size: 14px; color: var(--ink-soft); }
+.acc-content .suit b { display: block; color: var(--brown-deep); font-size: 12.5px; margin-bottom: 2px; }
+.acc-content h4 { font-size: 16px; margin: 16px 0 6px; color: var(--brown-deep); }
+.acc-content h4:first-child { margin-top: 2px; }
+
+@media (max-width: 900px) {
+  .tx__grid { grid-template-columns: 1fr; }
+  .tx--flip .tx__media { order: 0; }
+  .tx__media { position: static; max-width: 420px; }
+  .jump { top: 84px; }
+
+  /* mobile menu: list the treatment categories under "Treatments" */
+  .nav { justify-content: flex-start; padding: 110px 24px 40px; overflow-y: auto; gap: 14px; }
+  .nav > li { text-align: center; }
+  .nav__toggle { font-size: 18px; }
+  .nav .dropdown {
+    display: block; position: static; opacity: 1; visibility: visible; transform: none;
+    box-shadow: none; border: 0; background: transparent; min-width: 0; padding: 6px 0 0;
+  }
+  .nav .dropdown a { justify-content: center; padding: 6px 0; font-size: 14px; }
+  .nav .dropdown a:hover { padding-left: 0; background: transparent; }
+  .nav .dropdown a .cn { display: none; }
+  .nav .caret { display: none; }
+}
