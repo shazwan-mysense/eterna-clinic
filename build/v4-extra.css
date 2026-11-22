@@ -1,0 +1,21 @@
+
+/* ============================================================
+   v4 additions: 15-page structure (client's 10 categories,
+   Treatments overview, FAQ). Builds on v3-extra.css.
+   ============================================================ */
+
+/* FAQ page: two question groups in one readable column */
+.faq { max-width: 880px; }
+.faq-group + .faq-group { margin-top: clamp(56px, 7vw, 88px); }
+.faq-group > h2 { margin-bottom: 18px; }
+.faq-group > h2 .cn { display: block; font-size: 13px; color: var(--taupe); letter-spacing: .15em; margin-top: 6px; }
+.faq .acc-item__head { font-size: 17px; padding: 18px 4px; text-align: left; }
+.faq .acc-content { padding: 0 8px 22px 4px; }
+.faq .acc-content a { color: var(--brown); text-decoration: underline; text-underline-offset: 3px; }
+
+/* the category hero carries both the Book Now button and the back link */
+.split-hero__panel .crumb { margin-top: 18px; }
+
+@media (max-width: 900px) {
+  .nav .dropdown a.all { border-top: 0; margin-top: 0; padding-top: 6px; }
+}

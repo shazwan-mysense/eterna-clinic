@@ -45,8 +45,12 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.classList.add('in-view');
-          io.unobserve(e.target);
+          // a carousel's cards reveal together: the ones scrolled off to the side never intersect on their own
+          const track = e.target.closest('.carousel__track');
+          (track ? track.querySelectorAll('.reveal, .reveal-zoom') : [e.target]).forEach(el => {
+            el.classList.add('in-view');
+            io.unobserve(el);
+          });
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
