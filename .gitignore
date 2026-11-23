@@ -2,3 +2,6 @@
 .claude/
 build/__pycache__/
 *.pdf
+elementor-guide/
+*.zip
+10-page/

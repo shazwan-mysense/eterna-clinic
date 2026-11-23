@@ -12,8 +12,7 @@ from the client's **"ETERNA WEBSITE IMAGES"** folder.
 
 | Link | What it is |
 |---|---|
-| `/v4/` | **15-page version.** The client's 10 treatment categories each get their own page (treatments as sections, like v3), plus Home, About Us, a Treatments overview, FAQ and Contact & Booking. Built by `build/generate_v4.py`. |
-| `/v3/` | **10-page version.** Same design and client content, condensed: Home, About Us, Contact & Booking, and 7 treatment category pages where every treatment is a section (no per-treatment pages). Built by `build/generate_v3.py`. |
+| `/v3/` | **15-page version.** The client's 10 treatment categories each get their own page (every treatment is a section on its page), plus Home, About Us, a Treatments overview, FAQ and Contact & Booking. Built by `build/generate_v3.py`. (Until 23 Nov 2026 this was `/v4/`; the earlier 10-page `/v3/` was retired and is in git history, and its generator survives as `build/generate_10page.py` because the 15-page build reuses it.) |
 | `/v2/` | Client brief applied (53 pages, one page per treatment). The site root redirects here. |
 | `/v1/` | Previous mockup: the 6-page Pure Skin template clone with placeholder content and stock photos, before the client's amendments (commit `3be92e0`). Kept as-is for reference. |
 
@@ -28,17 +27,11 @@ from the client's **"ETERNA WEBSITE IMAGES"** folder.
 | `v2/treatments/<category>.html` | 9 category pages (Botox links straight to its treatment page) |
 | `v2/treatments/<treatment>.html` | 41 treatment pages |
 
-## v3 structure (10 pages)
-
-Home · About Us · Treatments (menu only, not a page) · Contact, plus a **Book Now** button that opens the booking form on Contact.
-
-Treatment pages: Signature Facials · Acne, Scars & Pigmentation · Skin Boosters · Botox & Rejuvenation · Face Lifting & Contouring · Hair & Scalp · Wellness & Longevity. Each treatment section shows its intro, benefits and who it's for, a Book Now button (pre-fills the category on the booking form) and collapsible treatment details. Rebuild with `python3 build/generate_v3.py`; extra styles live in `build/v3-extra.css`.
-
-## v4 structure (15 pages)
+## v3 structure (15 pages)
 
 Home · About Us · Treatments (dropdown of the 10 categories, plus "All treatments" → the overview page) · FAQ · Contact, plus a **Book Now** button that opens the booking form on Contact.
 
-Pages: Home, About Us, Treatments overview, Signature Facials, Acne & Scars, Pigmentation, Skin Boosters, Face Lifting & Tightening, Botox, Face & Eye Rejuvenation, Face Contouring, Hair, Wellness, FAQ, Contact & Booking. Categories and their treatment lists follow the client brief exactly, so a treatment the brief lists under several categories (e.g. Pico Laser, Profhilo) appears as a section on each of those pages. FAQ answers are drawn from the brief's clinic details and treatment copy; the clinic should check them before launch. Rebuild with `python3 build/generate_v4.py`; extra styles live in `build/v4-extra.css`.
+Pages: Home, About Us, Treatments overview, Signature Facials, Acne & Scars, Pigmentation, Skin Boosters, Face Lifting & Tightening, Botox, Face & Eye Rejuvenation, Face Contouring, Hair, Wellness, FAQ, Contact & Booking. Categories and their treatment lists follow the client brief exactly, so a treatment the brief lists under several categories (e.g. Pico Laser, Profhilo) appears as a section on each of those pages. FAQ answers are drawn from the brief's clinic details and treatment copy; the clinic should check them before launch. Rebuild with `python3 build/generate_v3.py`; extra styles live in `build/extra-sections.css` and `build/extra-15page.css`.
 
 ## How to edit
 
